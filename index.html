@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Handshaik SDR 90-Day Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Calvin Leo Anchan's plan for his first 90 days as founding Sales Development Representative at Handshaik in Leeds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Mrs+Saint+Delafield&display=swap">
+<style>
+/* Layout: handshaik.com look. Light #f9f9f9 page, ink #0f0320, medium-weight grotesk headlines, violet #8a2cf6 pill buttons, white rounded cards with faint borders */
+:root{
+  --bg:#f9f9f9; --surface:#ffffff; --fg:#0f0320; --muted:rgba(15,3,32,.62); --line:rgba(84,79,91,.14); --tint:#f3f1f5;
+  --violet:#8a2cf6; --violet-ink:#7a1fe6; --lilac:#e3daed; --night:#0f0320; --on-night:#ffffff; --on-night-muted:rgba(255,255,255,.7);
+  --t-learn:#eeedef; --t-research:#e3daed; --t-outreach:#b98bf9; --t-meet:#8a2cf6; --on-tint:#0f0320; --on-dark:#ffffff;
+  --display:"Inter Tight","Oracle",Arial,sans-serif; --sans:"Inter",Arial,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0c0614; --surface:#171022; --fg:#f2eef8; --muted:rgba(242,238,248,.66); --line:rgba(242,238,248,.12); --tint:#1f1630;
+  --violet-ink:#b98bf9; --lilac:#2e1f48; --night:#1d1230;
+  --t-learn:#2a2238; --t-research:#3d2a63; --t-outreach:#7a3fe0; --t-meet:#b98bf9; --on-tint:#f2eef8; --on-dark:#0f0320; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c0614; --surface:#171022; --fg:#f2eef8; --muted:rgba(242,238,248,.66); --line:rgba(242,238,248,.12); --tint:#1f1630;
+  --violet-ink:#b98bf9; --lilac:#2e1f48; --night:#1d1230;
+  --t-learn:#2a2238; --t-research:#3d2a63; --t-outreach:#7a3fe0; --t-meet:#b98bf9; --on-tint:#f2eef8; --on-dark:#0f0320; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.55;
+  padding-block:24px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:72px}
+h1,h2,h3{margin:0;text-wrap:balance;font-family:var(--display);font-weight:500;letter-spacing:-.015em}
+h1{font-size:clamp(40px,7.4vw,72px);line-height:1.02}
+h2{font-size:clamp(28px,4.4vw,42px);line-height:1.1}
+h3{font-size:21px;line-height:1.25}
+p{margin:0;max-width:64ch}
+.muted{color:var(--muted)}
+.label{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--violet-ink)}
+
+header{padding-top:clamp(24px,6vw,72px);display:flex;flex-direction:column;gap:22px;align-items:flex-start}
+header h1 .v{color:var(--violet-ink)}
+.lead{font-size:20px;color:var(--muted)}
+.by{color:var(--muted);font-size:15px}
+.cta{display:inline-flex;gap:8px;align-items:center;background:var(--violet);color:#fff;border-radius:99px;padding:12px 24px;font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.cta:hover{background:#7a1fe6}
+section{display:flex;flex-direction:column;gap:20px;min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;min-width:0}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:6px}
+.stat b{font-family:var(--display);font-size:48px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums;color:var(--violet-ink)}
+.stat span{font-size:15px;color:var(--muted)}
+
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.compare{grid-template-columns:1fr}}
+.compare .card{display:flex;flex-direction:column;gap:8px}
+.compare .hi{background:var(--night);color:var(--on-night);border-color:transparent}
+.compare .hi .label{color:#c9a8fb}
+.compare .hi p{color:var(--on-night-muted)}
+
+.scrub{display:flex;flex-direction:column;gap:18px}
+.scrub-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.week{font-family:var(--display);font-size:32px;font-weight:500;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--violet)}
+.marks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:-8px}
+.split{display:flex;height:38px;overflow:hidden;border-radius:99px;border:1px solid var(--line)}
+.split div{transition:flex-basis .25s ease;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;font-weight:500;white-space:nowrap;overflow:hidden}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:99px;margin-right:6px;vertical-align:middle}
+.now{border-left:3px solid var(--violet);padding-left:14px;display:flex;flex-direction:column;gap:4px}
+.reviews{display:flex;gap:8px;flex-wrap:wrap}
+.pill{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:99px;padding:8px 18px;font:inherit;font-size:15px;cursor:pointer}
+.pill:hover{border-color:var(--violet)}
+.pill[aria-pressed=true]{background:var(--violet);border-color:var(--violet);color:#fff}
+.pill:focus-visible,input:focus-visible,.copy:focus-visible,.cta:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+
+.call{display:flex;flex-direction:column;gap:16px}
+.why-them{font-size:15px;background:var(--tint);border-radius:12px;padding:12px 14px}
+.why-them b{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--violet-ink);display:block;margin-bottom:2px}
+.opener{font-family:var(--display);font-size:21px;font-weight:400;line-height:1.35;border-left:3px solid var(--violet);padding-left:14px}
+.qs{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.qual{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.qual label{display:flex;gap:10px;align-items:flex-start;background:var(--tint);border:1px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;font-size:15px}
+.qual label b{display:block;font-size:16px;font-weight:600}
+.qual input{margin-top:4px;accent-color:var(--violet)}
+.verdict{font-size:15px;padding:12px 16px;background:var(--tint);color:var(--fg);border-radius:12px}
+.verdict.go{background:var(--violet);color:#fff}
+
+.handover{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.handover div{padding:18px;border:1px solid var(--line);border-radius:16px;display:flex;flex-direction:column;gap:4px;background:var(--surface)}
+.handover b{font-weight:600}
+
+.phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}
+.phase{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.phase .word{font-family:var(--display);font-size:40px;font-weight:500;line-height:1;color:var(--c)}
+.phase ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:16px}
+.check{margin-top:auto;font-size:15px;background:var(--tint);border-radius:12px;padding:10px 12px}
+.check b{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block}
+
+table{width:100%;border-collapse:collapse;font-size:16px;min-width:540px}
+th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td:last-child{color:var(--muted)}
+.tbl{overflow-x:auto}
+
+.why{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:600px){.why{grid-template-columns:1fr}}
+.why .card{display:flex;flex-direction:column;gap:6px}
+.why b{font-family:var(--display);font-size:19px;font-weight:500}
+
+.honest{background:var(--night);color:var(--on-night);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.honest .label{color:#c9a8fb}
+.honest p{color:var(--on-night-muted)}
+
+footer{display:flex;flex-direction:column;gap:20px}
+.sign{display:flex;flex-direction:column;align-items:flex-end;gap:2px;padding-right:8px}
+.sign .name{font-family:"Mrs Saint Delafield","Snell Roundhand","Brush Script MT",cursive;font-size:clamp(56px,12vw,86px);line-height:1;transform:rotate(-4deg);color:var(--violet-ink)}
+.sign .role{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:6px}
+.contacts{display:flex;flex-wrap:wrap;gap:8px}
+.copy{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:99px;padding:8px 16px;font:inherit;font-size:15px;cursor:pointer}
+.copy small{font-family:var(--mono);font-size:11px;color:var(--muted)}
+a{color:var(--violet-ink)}
+@media (prefers-reduced-motion:reduce){.split div{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="label">90-day plan · Founding SDR · Leeds</span>
+  <h1>Find. Nurture. Win.<br><span class="v">My first 90 days at Handshaik.</span></h1>
+  <p class="lead">The job is to find the firms that should be using Handshaik, understand why they'd care, reach the right person with a reason to talk, and hand the Founder and Sales Lead meetings worth having. Here is how I'd get to full speed, and how you could judge me along the way.</p>
+  <a class="cta" href="#call">See how I'd run a first call</a>
+  <p class="by">Calvin Leo Anchan · November 2026</p>
+</header>
+
+<section>
+  <span class="label">What I bring on day one</span>
+  <div class="stats">
+    <div class="stat"><b>50+</b><span>cold calls a day at Trescon Global</span></div>
+    <div class="stat"><b>170</b><span>businesses I researched and contacted for my own AI company</span></div>
+    <div class="stat"><b>37</b><span>replies from those 170</span></div>
+    <div class="stat"><b>10</b><span>paying clients in two months, every call, demo and close run by me</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>I'd prospect with Handshaik itself</h2>
+  <p class="muted">Your ad says target lists get built on the company's own platform. That's the best part of this job: every list I build is the product being used for real, and every call is a chance to say "this is how I found you".</p>
+  <div class="compare">
+    <div class="card"><span class="label">What I do today</span><h3>Signal Finder, built with Claude</h3><p class="muted">Pulls fresh funding rounds from public sources, scores each company out of 10 on size, stage, recency and fit, and ranks who to call first. It took me a day, and it does a small slice of what Handshaik does.</p></div>
+    <div class="card hi"><span class="label">What I'd do with Handshaik</span><h3>Brief in, ranked list out, then the phone</h3><p>Set a brief per segment, use the fit explanation and company signals to write the opener, enrich the right contact, and work the list in a shared pipeline the Founder and Sales Lead can see. Anything that slows me down goes to product as feedback.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Scrub through the 90 days</h2>
+  <p class="muted">Drag the slider to see where my time goes each week. The mix moves from learning the product and the dealmaker's world, to a full daily outbound rhythm, to testing segments and messaging and adding content.</p>
+  <div class="card scrub">
+    <div class="scrub-top"><span class="week" id="wk">Week 1</span><span class="label" id="ph">Days 1 to 30 · Find</span></div>
+    <input type="range" id="slider" min="1" max="13" value="1" aria-label="Week of the 90 days">
+    <div class="marks"><span>Day 1</span><span>Day 30</span><span>Day 60</span><span>Day 90</span></div>
+    <div class="split" id="split" aria-hidden="true"></div>
+    <div class="legend" id="legend"></div>
+    <div class="now" id="now"></div>
+    <div class="reviews">
+      <button class="pill" type="button" data-w="4">Day 30 review</button>
+      <button class="pill" type="button" data-w="9">Day 60 review</button>
+      <button class="pill" type="button" data-w="13">Day 90 review</button>
+    </div>
+  </div>
+</section>
+
+<section id="call">
+  <h2>How I would run a first call</h2>
+  <p class="muted">Pick who picks up. You'll see why they're on my list, my opener and the questions I'd ask. Tick what you hear, and the check tells you whether it's a meeting for the Sales Lead or a follow-up for later.</p>
+  <div class="card call">
+    <div class="reviews" id="personas"></div>
+    <div class="why-them" id="whythem"></div>
+    <p class="opener" id="opener"></p>
+    <ol class="qs" id="qs"></ol>
+    <div class="qual" id="qual"></div>
+    <div class="verdict" id="verdict" aria-live="polite"></div>
+  </div>
+</section>
+
+<section>
+  <h2>What every meeting handover would include</h2>
+  <p class="muted">A meeting is only as good as the note that comes with it. This is what the Founder or Sales Lead would get, logged in the CRM before the call.</p>
+  <div class="handover">
+    <div><span class="label">Why them</span><b>The signal</b><span class="muted">The fit reason and the trigger that put them on my list.</span></div>
+    <div><span class="label">Today</span><b>How they originate</b><span class="muted">Their current tools, data sources and how much is spreadsheets.</span></div>
+    <div><span class="label">Pain</span><b>In their words</b><span class="muted">The exact problem they described, quoted.</span></div>
+    <div><span class="label">Decision</span><b>Who and when</b><span class="muted">Who signs, who else uses it, and any renewal date on their current tools.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>The three phases</h2>
+  <div class="phases">
+    <div class="phase" style="--c:var(--t-outreach)">
+      <span class="label">Days 1 to 30</span>
+      <span class="word">Find.</span>
+      <h3>Learn the product, the buyer and what a good meeting looks like</h3>
+      <ul>
+        <li>Learn Handshaik well enough to demo the basics: briefs, company profiles, signals, contact enrichment and the pipeline.</li>
+        <li>Learn how dealmakers work: M&amp;A advisers, corporate finance, PE and corp dev, accountancy and consulting BD teams, and B2B sales teams.</li>
+        <li>Listen to the Founder's and Sales Lead's calls, read customer conversations, and agree what a qualified meeting means here.</li>
+        <li>Build my first lists in Handshaik by segment and start calling in week two, with feedback on every early conversation.</li>
+      </ul>
+      <div class="check"><b>Day 30 check-in</b>I can explain Handshaik in one sentence to each segment, I'm on the phone daily, and my CRM notes pass review.</div>
+    </div>
+    <div class="phase" style="--c:var(--violet-ink)">
+      <span class="label">Days 31 to 60</span>
+      <span class="word">Nurture.</span>
+      <h3>Full daily rhythm and the first meetings booked</h3>
+      <ul>
+        <li>Steady daily calling to the right people, with personalised email and LinkedIn around each call.</li>
+        <li>Every account researched before I dial: fit reason, recent signal, who decides.</li>
+        <li>Book meetings for the Sales Lead with the full handover note, and follow up every "not yet" with a date and a reason.</li>
+        <li>Log every call and outcome the same day so the pipeline is always true.</li>
+      </ul>
+      <div class="check"><b>Day 60 check-in</b>A steady rhythm, meetings the Sales Lead is glad to take, and a clean pipeline.</div>
+    </div>
+    <div class="phase" style="--c:var(--fg)">
+      <span class="label">Days 61 to 90</span>
+      <span class="word">Win.</span>
+      <h3>Test what works, and start adding to marketing</h3>
+      <ul>
+        <li>Run small tests on segments and openers (for example accountancy BD vs. M&amp;A advisers) and keep the winners.</li>
+        <li>Write openers by signal: a firm hiring BD people, a new partner, a fund or adviser moving into a new sector.</li>
+        <li>Share a short weekly note with sales, marketing and product on what buyers are saying.</li>
+        <li>Turn what I learn on calls into LinkedIn posts with the Founder, and sit in on demos to start the path to Account Executive.</li>
+      </ul>
+      <div class="check"><b>Day 90 check-in</b>Tests run and written up, pipeline growing, and a plan for next quarter.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>How we would measure it</h2>
+  <div class="card tbl">
+    <table>
+      <thead><tr><th>What</th><th>Target</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Conversations with the right person</td><td>Daily number agreed with the Sales Lead in week one</td><td>Personalised doesn't mean slow</td></tr>
+        <tr><td>Meetings booked</td><td>Agreed in week one, reviewed at Day 30</td><td>The number the Founder feels</td></tr>
+        <tr><td>Meetings that go ahead and qualify</td><td>Every one has the full handover note</td><td>Quality over a full diary</td></tr>
+        <tr><td>Tests run</td><td>One segment or message test every two weeks from Day 60</td><td>Early-stage GTM is about learning fast</td></tr>
+        <tr><td>Follow-ups</td><td>None overdue</td><td>Dealmakers buy when their timing is right</td></tr>
+        <tr><td>CRM notes</td><td>Logged the same day</td><td>Nobody has to chase me for context</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Why I can do this</h2>
+  <div class="why">
+    <div class="card"><b>I've built outbound from zero</b><p class="muted">Frontman AI is an AI receptionist I built on Claude and Vapi and sell myself. I built the list, wrote the messages and ran every call, demo and close: 170 businesses, 37 replies, 10 paying clients in two months.</p></div>
+    <div class="card"><b>I'm confident on the phone with senior people</b><p class="muted">50+ cold calls a day at Trescon Global to senior decision-makers in India, Qatar, Saudi Arabia and Dubai. Five B2B deals in two months.</p></div>
+    <div class="card"><b>I already think in signals and lists</b><p class="muted">I built Signal Finder to rank who to call first, and I research every account in LinkedIn Sales Navigator and Apollo before I dial. Records in Salesforce.</p></div>
+    <div class="card"><b>I can help with marketing too</b><p class="muted">Ran a campaign end to end at Enactus Aston and lifted online engagement 30%. I write all my own copy. MSc Business Analytics, so I measure what I test.</p></div>
+  </div>
+</section>
+
+<div class="honest">
+  <span class="label">Being straight with you</span>
+  <p>I haven't worked in M&amp;A or financial services, and my sales experience is spread across shorter roles and my own business rather than one long SDR seat. Your ad says the sector isn't essential, so the first 30 days above are built to close that gap fast. Judge me on the Day 30 review.</p>
+</div>
+
+<footer>
+  <p>Happy to walk through any of this, or change it after hearing how the Founder and Sales Lead work today.</p>
+  <div class="contacts">
+    <button class="copy" type="button" data-copy="calvinleo663@gmail.com">calvinleo663@gmail.com <small>copy</small></button>
+    <button class="copy" type="button" data-copy="07438 654126">07438 654126 <small>copy</small></button>
+    <button class="copy" type="button" data-copy="https://www.linkedin.com/in/calvin-leo-anchan-26a114209">LinkedIn <small>copy</small></button>
+  </div>
+  <div class="sign"><span class="name">Calvin Leo</span><span class="role">Calvin Leo Anchan · Founding SDR candidate, Handshaik</span></div>
+</footer>
+
+</div>
+
+<script>
+const CATS=[{k:'learn',n:'Learn',c:'var(--t-learn)',t:'var(--on-tint)'},{k:'research',n:'Lists and research',c:'var(--t-research)',t:'var(--on-tint)'},{k:'outreach',n:'Calls and outreach',c:'var(--t-outreach)',t:'#fff'},{k:'meetings',n:'Meetings, tests and content',c:'var(--t-meet)',t:'var(--on-dark)'}];
+const SPLIT=[
+ [70,20,10,0],[45,25,30,0],[30,25,40,5],[20,25,45,10],
+ [15,20,55,10],[10,20,55,15],[10,20,55,15],[10,20,50,20],[10,20,50,20],
+ [5,20,50,25],[5,20,45,30],[5,20,45,30],[5,20,45,30]];
+const NOW=[
+ 'Product training and demos from the Founder. Learn briefs, profiles, signals, enrichment and the pipeline. Set up the CRM.',
+ 'First calls, with feedback. Listen in on the Sales Lead\'s calls and read customer conversations.',
+ 'First lists built in Handshaik by segment, with the right person named at each. Calls rising daily.',
+ 'Day 30 review: one-sentence pitch per segment, on the phone daily, CRM notes pass review.',
+ 'Full rhythm: calls with personalised email and LinkedIn around each one.',
+ 'First meetings booked for the Sales Lead, each with the full handover note.',
+ 'Every account researched before I dial: fit reason, recent signal, who decides.',
+ 'Tightening each list based on who picks up and who books.',
+ 'Day 60 review: steady rhythm, qualified meetings, clean pipeline.',
+ 'First segment test live, for example accountancy BD vs. M&A advisers.',
+ 'Openers by signal go live. First LinkedIn post with the Founder from what buyers are saying.',
+ 'Weekly note to sales, marketing and product. Sitting in on demos.',
+ 'Day 90 review: tests written up, pipeline growing, plan for next quarter.'];
+const s=document.getElementById('slider'),split=document.getElementById('split');
+CATS.forEach(c=>{const d=document.createElement('div');d.style.background=c.c;d.style.color=c.t;split.appendChild(d)});
+document.getElementById('legend').innerHTML=CATS.map(c=>`<span><i style="background:${c.c}"></i>${c.n}</span>`).join('');
+function draw(){
+ const w=+s.value,v=SPLIT[w-1];
+ document.getElementById('wk').textContent='Week '+w;
+ document.getElementById('ph').textContent=w<=4?'Days 1 to 30 · Find':w<=9?'Days 31 to 60 · Nurture':'Days 61 to 90 · Win';
+ [...split.children].forEach((d,i)=>{d.style.flexBasis=v[i]+'%';d.textContent=v[i]>=12?v[i]+'%':''});
+ document.getElementById('now').innerHTML=`<span class="label">This week</span><p>${NOW[w-1]}</p>`;
+ document.querySelectorAll('[data-w]').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.w===w));
+}
+s.addEventListener('input',draw);
+document.querySelectorAll('[data-w]').forEach(b=>b.addEventListener('click',()=>{s.value=b.dataset.w;draw()}));
+draw();
+
+const P={
+ 'M&A adviser':{w:'Boutique corporate finance house, small team, sell-side and buy-side mandates. Signal: two new deal originators hired this quarter.',
+  o:'"Hi, it\'s Calvin from Handshaik. I saw you\'ve just added two originators. When they\'re looking for the next mandate, where does the target list come from today?"',
+  q:['How long does it take to build a qualified long-list for a new mandate?','What do you pay for data today, and what do you still do by hand?','Who would decide on a tool like this, and who would use it every day?']},
+ 'Accountancy partner':{w:'Regional accountancy practice growing an advisory arm. Signal: new head of business development.',
+  o:'"Hi, it\'s Calvin from Handshaik. Most practices I speak to win new clients through referrals and hope. How does your team decide which local businesses to go after?"',
+  q:['Which kinds of business are your best clients, and how do you find more like them?','What happens to a prospect between the first chat and the engagement letter?','If you could see which firms just changed auditor or hit a growth point, what would you do with that?']},
+ 'PE or corp dev':{w:'Mid-market buy-and-build platform. Signal: two add-on acquisitions announced this year.',
+  o:'"Hi, it\'s Calvin from Handshaik. You\'ve done two add-ons this year. How does the team keep track of the next twenty without it living in someone\'s spreadsheet?"',
+  q:['How do you map a sector today when you\'re looking for add-ons?','How many tools does the team stitch together for company, financial and contact data?','When does the next thesis or sector review start?']},
+ 'B2B head of sales':{w:'Growing B2B services firm with an outbound team. Signal: hiring SDRs on LinkedIn.',
+  o:'"Hi, it\'s Calvin from Handshaik. You\'re hiring SDRs, so the question I\'d ask is: where will their lists come from, and how will they know why each company is on it?"',
+  q:['How do reps build lists today, and how long does it take?','How much of your contact data bounces or is out of date?','Who owns the tools budget for the sales team?']}};
+const Q=[{k:'n',t:'Need',d:'Finding or tracking targets is slow, costly or manual'},{k:'f',t:'Fit',d:'Right type and size of firm for Handshaik'},{k:'a',t:'Decision-maker',d:'Talking to them, or I know who it is'},{k:'t',t:'Timing',d:'A reason to look in the next quarter or two'}];
+let who='M&A adviser';const ticked=new Set();
+const pe=document.getElementById('personas');
+Object.keys(P).forEach(k=>{const b=document.createElement('button');b.className='pill';b.type='button';b.textContent=k;b.addEventListener('click',()=>{who=k;ticked.clear();call()});pe.appendChild(b)});
+const qe=document.getElementById('qual');
+Q.forEach(x=>{const l=document.createElement('label');l.innerHTML=`<input type="checkbox" data-k="${x.k}"><span><b>${x.t}</b>${x.d}</span>`;l.querySelector('input').addEventListener('change',e=>{e.target.checked?ticked.add(x.k):ticked.delete(x.k);verdict()});qe.appendChild(l)});
+function verdict(){const v=document.getElementById('verdict'),n=ticked.size;
+ v.className='verdict'+(n>=3&&ticked.has('n')?' go':'');
+ v.textContent=n===0?'Tick what you hear on the call.':
+  !ticked.has('n')?'No clear need yet. Keep asking how they find and track targets today.':
+  n===4?'All four. Book the meeting with the Sales Lead and send the full handover note.':
+  n===3?'Strong. Book the meeting and flag the missing piece in the handover note.':
+  'The need is there but it\'s early. Log it, set a follow-up date and a reason to call back.'}
+function call(){pe.querySelectorAll('.pill').forEach(b=>b.setAttribute('aria-pressed',b.textContent===who));
+ document.getElementById('whythem').innerHTML='<b>Why they\'re on my list (example)</b>'+P[who].w;
+ document.getElementById('opener').textContent=P[who].o;
+ document.getElementById('qs').innerHTML=P[who].q.map(q=>`<li>${q}</li>`).join('');
+ qe.querySelectorAll('input').forEach(i=>i.checked=ticked.has(i.dataset.k));verdict()}
+call();
+
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',async()=>{
+ const sm=b.querySelector('small');try{await navigator.clipboard.writeText(b.dataset.copy);sm.textContent='copied'}catch(e){sm.textContent='select to copy'}
+ setTimeout(()=>sm.textContent='copy',1500)}));
+</script>
+</body>
+</html>
